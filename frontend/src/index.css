@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: var(--font-outfit);
+}
+
+@theme {
+  
+    --font-outfit: "Outfit";
+    /* Define custom colors */
+    /* --color-primary: #5f6fff; */
+    --color-primary: #000;
+    
+    
+
+  /* Define custom grid template columns */
+  --grid-cols-auto: repeat(auto-fill, minmax(200px, 1fr));
+}
+  /* ye sb dekh ke drna nhi h chat gpt zindabad */
+@layer utilities {
+  .grid-cols-auto {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+
+
+.active hr{
+  @apply block
+}
+
+::-webkit-scrollbar{
+  @apply hidden
+}
+
+@media (max-width:740px) {
+  .active p{
+    @apply text-white bg-primary
+  }
+}
